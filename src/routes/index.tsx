@@ -114,7 +114,7 @@ function analyze(t: TxnInput): Analysis {
     reasons.push({ score: 8, text: "Location differs from the user's home city" });
   }
 
-  const hour = Number(t.time.split(":")[0]);
+  const hour = Number(t.time.split(":")[0] ?? "12");
   if (hour >= 0 && hour < 5) {
     riskScore += 10;
     reasons.push({ score: 10, text: "Transaction occurs during low-activity night hours" });
