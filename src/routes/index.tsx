@@ -226,7 +226,7 @@ const inputCls =
   "w-full rounded-lg border border-input bg-card px-3 py-2 text-sm text-foreground shadow-sm outline-none transition focus:border-ring focus:ring-2 focus:ring-ring/25";
 
 function DecisionEngine() {
-  const [txn, setTxn] = useState<TxnInput>(PRESETS[0].value);
+  const [txn, setTxn] = useState<TxnInput>(PRESETS[0]!.value);
   const [result, setResult] = useState<Analysis | null>(null);
   const [analyzing, setAnalyzing] = useState(false);
   const [stats, setStats] = useState({ total: 0, approved: 0, review: 0, blocked: 0 });
